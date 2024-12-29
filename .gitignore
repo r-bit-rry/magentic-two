@@ -1,0 +1,6 @@
+uv.lock
+*.pyc
+.venv/
+tmp/
+.vscode/
+.DS_Store

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "magentic-two"
+version = "0.1.0"
+requires-python = ">=3.10, <3.13"
+dependencies = [
+    "autogen-agentchat==0.4.0.dev12",
+    "autogen-core==0.4.0.dev12",
+    "autogen-ext==0.4.0.dev12",
+    "torch",
+    "easyocr",
+    "supervision==0.18.0",
+    "transformers",
+    "ultralytics==8.1.24",
+    "azure-identity",
+    "numpy",
+    "pydantic",
+    "markitdown",
+    "aiofiles",
+    "playwright",
+    "openai"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["magentic_two"]
+
+[tool.poe.tasks]
+test.sequence = [
+    "playwright install",
+    "pytest -n auto",
+]
