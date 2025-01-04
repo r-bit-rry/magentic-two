@@ -7,9 +7,9 @@ name = "magentic-two"
 version = "0.1.0"
 requires-python = ">=3.10, <3.13"
 dependencies = [
-    "autogen-agentchat==0.4.0.dev12",
-    "autogen-core==0.4.0.dev12",
-    "autogen-ext==0.4.0.dev12",
+    "autogen-agentchat==0.4.0.dev13",
+    "autogen-core==0.4.0.dev13",
+    "autogen-ext==0.4.0.dev13",
     "torch",
     "easyocr",
     "supervision==0.18.0",
@@ -21,7 +21,10 @@ dependencies = [
     "markitdown",
     "aiofiles",
     "playwright",
-    "openai"
+    "openai",
+    "feedparser",
+    "python-dateutil",
+    "ollama"
 ]
 
 [tool.hatch.build.targets.wheel]
